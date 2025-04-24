@@ -5,7 +5,7 @@ function App(){
   const[temp,setTemp]=useState(false)
   const[weather,setWeather]=useState([]);
   useEffect(()=>{
-    const url="http://api.weatherapi.com/v1/forecast.json"
+    const url="https://api.weatherapi.com/v1/forecast.json"
     const key="key=a188c631d27c4b788cb112629252404"
    fetch(`${url}?${key}&q=washim`)
    .then(response=>response.json())
@@ -15,7 +15,7 @@ function App(){
    },[])
 
   const searchWeather = () =>{
-    const url="http://api.weatherapi.com/v1/forecast.json"
+    const url="https://api.weatherapi.com/v1/forecast.json"
     const key="key=a188c631d27c4b788cb112629252404"
    fetch(`${url}?${key}&q=${city}`)
    .then(response=>response.json())
